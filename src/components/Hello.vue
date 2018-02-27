@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ message }}</h1>
-    <button @click="clicked">Click</button>
+    <button @click="click">Click</button>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default class Hello extends Vue {
         console.log('created');
     }
 
-    clicked() {
+    click() {
         console.log('clicked');
     }
 }

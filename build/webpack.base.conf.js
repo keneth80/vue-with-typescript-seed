@@ -1,11 +1,19 @@
-var path = require('path')
-var utils = require('./utils')
-var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
+const path = require('path');
+const utils = require('./utils');
+const config = require('../config');
+const vueLoaderConfig = require('./vue-loader.conf');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+
+const pcPlatform = ['naver', 'hangame', 'ingame'];
+
+const service = config.service || 'page';
+const platform = pcPlatform.includes(config.platform)? 'pc' : config.platform;
+const viewType = platform === 'stoveapp'? 'mobile' : platform;
+
+console.log('config : ', service, platform, viewType);
 
 module.exports = {
   entry: {

@@ -1,5 +1,13 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
-var path = require('path')
+const merge = require('webpack-merge');
+const path = require('path');
+
+const {NODE_ENV} = process.env;
+const {
+    service,
+    platform,
+    server
+} = require('./now');
 
 module.exports = {
   build: {
