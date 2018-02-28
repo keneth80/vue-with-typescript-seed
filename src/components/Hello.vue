@@ -8,6 +8,9 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import lodash from 'lodash';
+// import d3 from '../lib/d3/d3.min';
+import Store from 'store';
 
 @Component({})
 export default class Hello extends Vue {
@@ -18,7 +21,7 @@ export default class Hello extends Vue {
     }
 
     created() {
-        console.log('created');
+        console.log('created', lodash, Store);
     }
 
     click() {

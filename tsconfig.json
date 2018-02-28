@@ -7,10 +7,21 @@
     ],
     "module": "es2015",
     "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "store": ["store/pc"],
+      "d3": ["lib/d3/d3.min.js"]
+    },
     "target": "es5",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -13,7 +13,7 @@ const service = config.service || 'page';
 const platform = pcPlatform.includes(config.platform)? 'pc' : config.platform;
 const viewType = platform === 'stoveapp'? 'mobile' : platform;
 
-console.log('config : ', service, platform, viewType);
+console.log('config : ', service, platform, config.server);
 
 module.exports = {
   entry: {
@@ -30,7 +30,8 @@ module.exports = {
     extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'store': resolve('src/store/pc.js')
     }
   },
   module: {
